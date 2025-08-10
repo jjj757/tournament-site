@@ -76,7 +76,7 @@ export default function TournamentLanding() {
           <div>
             <div className="rounded-3xl overflow-hidden shadow-sm border border-black/5">
               <img
-                src="public/vbfh-turf1.jpg"  // file lives in public/hero.jpg
+                src={`${import.meta.env.BASE_URL}vbfh-turf1.jpg`}  // file lives in public/hero.jpg
                 alt="Indoor soccer at Virginia Beach Field House"
                 className="w-full h-[260px] md:h-[420px] object-cover"
                 loading="eager"
