@@ -60,8 +60,8 @@ export default function TournamentLanding() {
               One competitive division. Two-day tournament. Coed format with <span className="font-semibold">2 women on the field at all times</span>.
             </p>
             <div className="mt-4 flex flex-wrap gap-2">
-              <Badge><Calendar className="mr-2 size-4" /> Date: <span className="ml-1 font-medium">TBD</span></Badge>
-              <Badge><MapPin className="mr-2 size-4" /> Location: <span className="ml-1 font-medium">Your Facility, VA</span></Badge>
+              <Badge><Calendar className="mr-2 size-4" /> Date: <span className="ml-1 font-medium">DEC, 2025</span></Badge>
+              <Badge><MapPin className="mr-2 size-4" /> Location: <span className="ml-1 font-medium">Virginia Beach Field House, 2020 Landstown Centre Wy, Virginia Beach, VA 23456</span></Badge>
               <Badge><Clock className="mr-2 size-4" /> Match Length: <span className="ml-1 font-medium">25–30 min</span></Badge>
             </div>
             <div className="mt-6 flex flex-col sm:flex-row gap-3">
@@ -74,7 +74,15 @@ export default function TournamentLanding() {
             </div>
           </div>
           <div>
-            <div className="aspect-video rounded-3xl overflow-hidden shadow-sm border border-black/5 bg-[url('https://images.unsplash.com/photo-1528094966335-4f964f3acb0c?q=80&w=1600&auto=format&fit=crop')] bg-cover bg-center" aria-label="Indoor soccer hero image" />
+            <div className="rounded-3xl overflow-hidden shadow-sm border border-black/5">
+              <img
+                src="public/vbfh-turf1.jpg"  // file lives in public/hero.jpg
+                alt="Indoor soccer at Virginia Beach Field House"
+                className="w-full h-[260px] md:h-[420px] object-cover"
+                loading="eager"
+                fetchpriority="high"
+              />
+            </div>
           </div>
         </div>
       </motion.section>
@@ -179,11 +187,11 @@ export default function TournamentLanding() {
           </div>
           <div className="rounded-2xl border border-black/5 bg-white p-5 shadow-sm">
             <div className="font-semibold">What’s the refund policy?</div>
-            <p className="text-black/70 mt-1">TBD. Common approach: full until 21–28 days out, partial until 7–14 days, none after. Weather/force majeure language recommended.</p>
+            <p className="text-black/70 mt-1">TBD.</p>
           </div>
           <div className="rounded-2xl border border-black/5 bg-white p-5 shadow-sm">
             <div className="font-semibold">Can 16–17-year-olds play?</div>
-            <p className="text-black/70 mt-1">Default is 18+. You may allow 16–17 with parental consent and added safeguards (your call).</p>
+            <p className="text-black/70 mt-1">TBD</p>
           </div>
           <div className="rounded-2xl border border-black/5 bg-white p-5 shadow-sm">
             <div className="font-semibold">How many games?</div>
@@ -203,7 +211,7 @@ export default function TournamentLanding() {
 
       {/* Footer */}
       <footer className="border-t border-black/5 py-8 text-center text-xs text-black/60">
-        © {new Date().getFullYear()} Your Facility — Coed 7v7 Indoor Tournament
+        © {new Date().getFullYear()} Virginia Beach Field House — Coed 7v7 Indoor Tournament
       </footer>
     </div>
   );
