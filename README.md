@@ -1,3 +1,7 @@
+# Something fun that could be implemented in the future
+A mix between exploring an opportunity, some vibe coding with AI, and learning basic HTML and Java
+
+
 # React + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
