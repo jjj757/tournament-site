@@ -6,6 +6,11 @@ import { Calendar, MapPin, Users, Trophy, Clock, ShieldCheck, ClipboardList, Mai
 // Replace all TBD placeholders with the real info when ready.
 // TailwindCSS is used for styling. Links currently point to placeholders.
 
+// === Add these two lines ===
+const TEAM_FORM_URL = "https://forms.gle/QV2r8AzUxJddMvHc7";
+const FREE_AGENT_FORM_URL = "https://forms.gle/Wi2jPofKpUpSgbEX9";
+
+
 export default function TournamentLanding() {
   const Badge = ({ children }) => (
     <span className="inline-flex items-center rounded-full border px-3 py-1 text-xs md:text-sm font-medium shadow-sm bg-white/70 backdrop-blur border-black/5">
@@ -109,9 +114,9 @@ export default function TournamentLanding() {
       <Section id="rules" title="Rules at a Glance" subtitle="Full rulebook will be provided to captains upon registration">
         <div className="grid md:grid-cols-2 gap-4 md:gap-6">
           <ul className="rounded-2xl border border-black/5 bg-white p-5 shadow-sm space-y-3 text-sm">
-            <li className="flex items-start gap-2"><ShieldCheck className="size-4 mt-0.5"/> 7v7 indoor; <span className="font-medium">2 women on the field at all times</span>. Female GK counts toward the minimum.</li>
+            <li className="flex items-start gap-2"><ShieldCheck className="size-4 mt-0.5"/> 7v7 indoor; <span className="font-medium">2 women on the field at all times</span></li>
             <li className="flex items-start gap-2"><ShieldCheck className="size-4 mt-0.5"/> Match length: <span className="font-medium">25–30 minutes</span> running clock; 5-minute turnover; no halftime.</li>
-            <li className="flex items-start gap-2"><ShieldCheck className="size-4 mt-0.5"/> Group stage points: 3/1/0. Tiebreakers: GD (cap +6), Goals For, Head-to-Head, Fair Play, Coin Toss.</li>
+            <li className="flex items-start gap-2"><ShieldCheck className="size-4 mt-0.5"/> Group stage </li>
             <li className="flex items-start gap-2"><ShieldCheck className="size-4 mt-0.5"/> Slide tackles prohibited. Unlimited on-the-fly subs. Facility restarts (kick-in/throw) apply.</li>
           </ul>
           <ul className="rounded-2xl border border-black/5 bg-white p-5 shadow-sm space-y-3 text-sm">
@@ -164,16 +169,24 @@ export default function TournamentLanding() {
               <li>Submit full roster & signed waivers by the roster lock date.</li>
             </ol>
             <div className="mt-4 flex flex-wrap gap-3">
-              <a href="#" className="inline-flex items-center justify-center rounded-xl px-4 py-2 text-sm font-semibold shadow-sm bg-slate-900 text-white hover:opacity-90">Open Team Form</a>
+              <a 
+                href={TEAM_FORM_URL} 
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center rounded-xl px-4 py-2 text-sm font-semibold shadow-sm bg-slate-900 text-white hover:opacity-90">Open Team Form</a>
               <a href="#" className="inline-flex items-center justify-center rounded-xl px-4 py-2 text-sm font-semibold shadow-sm bg-white border border-black/10 hover:bg-slate-50">Pay Team Fee</a>
             </div>
-            <p className="text-xs text-black/50 mt-3">You can paste your Google Form + payment links here when ready.</p>
+            <p className="text-xs text-black/50 mt-3">TODO: Figure out how to collect payments (for both teams and Free Agents).</p>
           </div>
           <div className="rounded-2xl border border-black/5 bg-white p-5 shadow-sm">
             <div className="font-semibold mb-2">Free Agents</div>
             <p className="text-sm text-black/70">Don’t have a team? Join the pool and we’ll place you on a house team if spots open.</p>
-            <a href="#" className="mt-3 inline-flex items-center justify-center rounded-xl px-4 py-2 text-sm font-semibold shadow-sm bg-white border border-black/10 hover:bg-slate-50">Free Agent Form</a>
-            <p className="text-xs text-black/50 mt-3">Optional: Enable only if you want to create house teams.</p>
+            <a 
+              href={FREE_AGENT_FORM_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-3 inline-flex items-center justify-center rounded-xl px-4 py-2 text-sm font-semibold shadow-sm bg-white border border-black/10 hover:bg-slate-50">Free Agent Form</a>
+            <p className="text-xs text-black/50 mt-3">Optional: Captains, please message for access to spreadsheet if in need of players.</p>
           </div>
         </div>
       </Section>
